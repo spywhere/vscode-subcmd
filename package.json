@@ -1,0 +1,51 @@
+{
+  "name": "subcmd",
+  "displayName": "subcmd",
+  "description": "An extension for sub-command creation",
+  "version": "0.1.0",
+  "publisher": "spywhere",
+  "bugs": {
+    "url": "https://github.com/spywhere/vscode-subcmd/issues"
+  },
+  "homepage": "https://github.com/spywhere/vscode-subcmd/blob/master/README.md",
+  "keywords": [
+    "command"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/spywhere/vscode-subcmd.git"
+  },
+  "engines": {
+    "vscode": "^1.22.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "*"
+  ],
+  "main": "./dist/subcmd",
+  "contributes": {
+    "commands": [
+      {
+        "command": "subcmd.viewCommands",
+        "title": "subcmd: View commands..."
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "lint": "tslint --project tsconfig.json -e \"node_modules/**/*\" \"**/*.ts\""
+  },
+  "devDependencies": {
+    "@types/node": "^9.6.2",
+    "tslint": "^5.9.1",
+    "tslint-eslint-rules": "^5.1.0",
+    "typescript": "^2.8.1",
+    "vscode": "^1.1.14"
+  }
+}

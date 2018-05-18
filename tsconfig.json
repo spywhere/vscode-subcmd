@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "module": "commonjs",
+        "sourceMap": true,
+        "outDir": "dist",
+        "lib": ["es6"],
+        "removeComments": true,
+        "skipLibCheck": true,
+        "strict": true
+    },
+    "exclude": [
+        "node_modules",
+        ".vscode-test"
+    ]
+}
